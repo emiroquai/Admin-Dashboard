@@ -13,12 +13,16 @@ body {
     grid-template-rows: 125px 100%;
 }
 
-header {
-    display: grid;
-    grid-column: 2 / 3;
-    grid-row: 1 /2;
+img {
+    object-fit: fill;
 }
 
+.icon {
+    height: 20px;
+}
+
+
+/* Sidebar */
 .sidebar {
     display: grid;
     grid-auto-flow: row;
@@ -51,10 +55,6 @@ header {
     font-weight: 500;
 }
 
-img {
-    object-fit: fill;
-}
-
 .sideIcon {
     height: 20px;
     color: azure;
@@ -69,6 +69,39 @@ img {
     font-size: 1.5rem;
     font-weight: 900;
 }
+
+/* Header */
+
+header {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 1 /2;
+    grid-auto-flow: column;
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.searchBar {
+    display: grid;
+    width: clamp(200px, 30vw,400px);
+    height: 20px;
+    gap: var(--img-gap);
+    grid-auto-flow: column;
+    justify-content: start;
+    grid-template-columns: 20px 100%;
+}
+
+input {
+    background-color: lightgray;
+    border: 0;
+    border-radius: 8px;
+}
+
+.profilePicture.small{
+    height: 40px;
+}
+
+/* Main */
 
 main {
     display: grid;
