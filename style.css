@@ -1,6 +1,7 @@
 :root {
     font-family: 'Roboto', sans-serif;
-    --img-gap: 15px
+    --img-gap: 15px;
+    --main-color: rgba(21, 179, 87, 0.925);
 }
 
 body {
@@ -28,7 +29,7 @@ img {
     grid-auto-flow: row;
     grid-row: 1 / 3;
     grid-column: 1 / 2;
-    background-color: rgba(21, 179, 87, 0.925);
+    background-color: var(--main-color);
     color: azure;
     gap: 50px;
     grid-template-rows: 50px 220px 110px;
@@ -88,7 +89,7 @@ header {
 
 .searchBar {
     display: grid;
-    width: clamp(200px, 30vw,400px);
+    width: clamp(200px, 40vw, 500px);
     height: 20px;
     gap: var(--img-gap);
     grid-auto-flow: column;
@@ -128,15 +129,14 @@ input {
     row-gap: 0;
 }
 
-.profileName, .title.small{
+.profileName, .title.small, .command{
     font-weight: 700;
+    font-size: large;
 }
 
 .profileName.big {
     font-size: 1.5rem;
 }
-
-
 
 .profilePicture.small{
     height: 40px;
@@ -145,6 +145,23 @@ input {
 .profilePicture.big {
     height: 60px;
     grid-row: 1 / 3;
+}
+
+.commands {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: end;
+    gap: var(--img-gap);
+}
+
+.command {
+    background-color: var(--main-color);
+    color: azure;
+    width: 100px;
+    height: 40px;
+    border: 0;
+    border-radius: 8px;
+
 }
 
 /* Main */
