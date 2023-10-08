@@ -1,0 +1,75 @@
+:root {
+    font-family: 'Roboto', sans-serif;
+    --img-gap: 15px
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: 1fr 6fr;
+}
+
+header {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 1 /2;
+}
+
+.sidebar {
+    display: grid;
+    grid-auto-flow: row;
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+    background-color: rgba(21, 179, 87, 0.925);
+    color: azure;
+    gap: 50px;
+    grid-template-rows: 50px 220px 110px;
+    width: 200px;
+}
+
+.branding {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 10px;
+    height: 50px;
+    padding: 10px;
+}
+
+.pages, .settings {
+    display: grid;
+    grid-template-columns: 20px auto;
+    gap: var(--img-gap);
+    grid-auto-flow: row;
+    align-items: center;
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+img {
+    object-fit: fill;
+}
+
+.sideIcon {
+    height: 20px;
+    color: azure;
+}
+
+
+#logoImage {
+    height: 45px;
+}
+
+.logoText {
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+main {
+    display: grid;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    background-color: lightgrey;
+}
