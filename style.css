@@ -2,6 +2,7 @@
     font-family: 'Roboto', sans-serif;
     --img-gap: 15px;
     --main-color: rgba(21, 179, 87, 0.925);
+    --side-card-width: 200px;
 }
 
 body {
@@ -177,14 +178,20 @@ input {
 /* Main */
 
 .main {
-    display: grid;
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     background-color: lightgrey;
-    grid-template-columns: 7fr 3fr;
-    grid-template-rows: 290px 100vh;
     padding: 20px 20px;
+    height: 100vh;
+}
+
+.mainWrapper {
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    grid-template-rows: 290px 234px;
     gap: var(--img-gap);
+    padding-right: var(--img-gap);
+
 }
 
 .projects {
@@ -242,7 +249,7 @@ input {
 }
 
 .card.announcements {
-    max-width: 250px;
+    max-width: var(--side-card-width);
     padding: 20px 20px 0px;
     margin-top: 10px;
 }
@@ -269,4 +276,48 @@ li.last{
     height: 35px;
     font-size: 0.6rem;
 
+}
+
+.trending {
+    height: auto;
+    display: grid;
+    align-content: end;
+}
+
+.card.trending {
+    grid-row: 2 /3;
+    padding: 10px 20px;
+    margin-top: 10px;
+    max-width: var(--side-card-width);
+
+}
+
+.accountCard {
+    display: grid;
+    grid-template-columns: 40px auto;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: var(--img-gap);
+    row-gap: 3px;
+}
+
+.accountName, .accountInfo {
+    font-size: 0.7rem;
+    grid-column: 2 / 3;
+}
+
+.accountName {
+    align-self: end;
+    font-weight: 300;
+}
+
+.accountInfo {
+    align-self: start;
+    font-weight: 200;
+}
+
+.profilePicture.small.trending {
+    grid-row: 1/3;
 }
